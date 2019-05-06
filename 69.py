@@ -5,8 +5,6 @@ class Solution:
         low = 0
         high = x
         out = 0
-        if x == 1:
-            return 1
         while True:
             if out ** 2 <= x < (out+1) ** 2:
                 break
@@ -25,23 +23,19 @@ class TestSolution(unittest.TestCase):
         self.s = Solution()
 
     def test1(self):
-        self.assertEqual(self.s.mySqrt(9), 3)
+        self.assertEquals(self.s.mySqrt(9), 3)
 
     def test2(self):
-        self.assertEqual(self.s.mySqrt(10), 3)
+        self.assertEquals(self.s.mySqrt(10), 3)
 
     def test3(self):
-        self.assertEqual(self.s.mySqrt(11), 3)
+        self.assertEquals(self.s.mySqrt(11), 3)
 
     def test4(self):
-        self.assertEqual(self.s.mySqrt(4), 2)
+        self.assertEquals(self.s.mySqrt(4), 2)
 
     def test5(self):
-        self.assertEqual(self.s.mySqrt(16), 4)
-
-    def test6(self):
-        self.assertEqual(self.s.mySqrt(1), 1)
-
+        self.assertEquals(self.s.mySqrt(16), 3)
 
 if __name__ == '__main__':
     unittest.main()
